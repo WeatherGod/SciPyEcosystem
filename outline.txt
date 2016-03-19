@@ -57,5 +57,147 @@ We are looking to hire a few devops people with Linux experience!
 You don't need to know a thing about meteorology
  -- just have a willingness to learn Python!
 
-# Introduction to the SciPy Ecosystem
+# Overview
+ - TODO: A good image
+
+# NumPy
+ - *The* numerical N-dimensional array object for Python
+ - Completely different from the standard python's "array" type
+   - array is geared towards having a compact form of lists (great for buffers)
+   - NumPy is for Math!
+ - Implemented mostly in C, so it is fast
+ - Just a C-pointer with lots of dressing!
+   - Can interface very well with many existing numerical tools
+     (BLAS, ATLAS, FFTW, etc.)
+   - Has size, shape, ndim, and dtype
+ - Ex: NumPy math vs. Python math with loops
+ - Ex: Almost behaves like a hybrid python list/tuple
+   - Can modify contents (mutable)
+   - Cannot change its size
+
+# SciPy
+ - Goes beyond basic math algorithms
+ - Has general algorithms that apply to many domains
+   - cluster (e.g., kmeans)
+   - fftpack (goes way beyond numpy.fft)
+   - integrate (not just trapezoidal)
+   - interpolation
+     - There are interpolators for unstructured arbitrary data (general purpose)
+       and there are highly efficient interpolators for structured gridded
+       data. Too many people just use interp1d/interp2d/interpnd when they
+       don't need to. Read the documentation and find the one that would
+       work best for your data!
+     Ex: interp2d versus RectBivariateSpline
+   - io
+     - support for some scientific data formats
+     - this used to be essential before the days of pip/easy_install
+     - matlab, fortran, netcdf3, arff, IDL, wav, harwell_boeing
+   - ndimage
+     - convolutions, filters, transforms
+     - ndimage.measurements  (stats on labeled pixels)
+     - ndimage.morphology  (erosions, dilations, etc.)
+     - For more advanced features, see scikit-image
+   - spatial
+     - (c)KDTree  (friggin' awesome!)
+       Ex: Pineapple store example
+   - stats
+     - More statistics distributions than you can shake a stick at.
+     - And that's just the beginning! Check out statsmodels package
+       for even more statistics fun.
+     - TODO: Maybe explain a bit what one can do.
+   - special
+     - if you ever get a requirement to use a function with a French,
+       German, or Russian-sounding name, chances are it is in here
+     - BTW, when scientists talk of Lambda functions, it is usually
+       not what you think it is. It is in here.
+
+# Matplotlib
+  - Cross-platform, interactive-capable, scientific plotting tool
+  - In science, visualizing data is paramount
+  - We are visual beings. Our minds inherently understands things if
+    presented in a visual manner.
+  - A picture is worth a thousand words
+  - Make an interactive plot in as few as 3 lines of python::
+     import matplotlib.pyplot as plt
+     plt.plot([2, 5, 3])
+     plt.show()
+  - It is not stupidly unhelpful, obtrusive.
+  - Can have control over as much or as little detail as you want
+  - Also acts as an abstraction library to many GUI toolkits
+  - Interactive Applications using Matplotlib: http://www.amazon.com/Interactive-Applications-using-Matplotlib-Benjamin/dp/1783988843/ref=tmm_pap_title_0
+
+# IPython / Jupyter
+  - "Weaponize your tab"
+  - Copy-n-Paste multi-line code snippets directly into a REPL!
+  - Notebooks are fantasic for sharing code examples along with results
+  - Makes it easy to experiment
+  - Not intended to replace the debugger or be an IDE
+  - Rather, it is more like a sandbox
+
+# Anaconda/miniconda
+  - A "python" distribution from Continuum Analytics
+    (scare quotes because it manages more than just python packages)
+  - distutils/setuptools isn't good enough for the SciPy community
+  - this isn't to knock on these tools, but scientists have developed 
+    very useful tools that are not packaged through pip, and may
+    have very intricit binary dependency requirements.
+  - So, why don't we just use yum/apt-get/macports/homebrew/(package-manager
+    -of-the-month)?
+  - Scientists love to experiment, but they *hate* it when things break.
+  - They also hate waiting for IT to install the packages they want to try
+  - Conda provides user-space package management with environment management
+  - Most dynamic library linkages are at the user-space level, so IT can
+    update the underlying system with little fear of accidentally breaking
+    things.
+
+# The rest of the ecosystem
+## Visualization
+  - Bokeh
+  - seaborn
+  - cartopy
+  - basemap (long-term deprecated, new development use cartopy instead)
+  - ggplot (Grammar of Graphics, ported from R)
+  - descartes (easy display of geometric shapes)
+
+## Do more with arrays
+  - pandas
+  - xarray
+  - pytables
+  - numba
+  - numexpr
+  - dask
+  - blaze
+  - ibis
+  - odo
+
+## Symbolic Math
+  - sympy
+  - sage
+
+## Geographic Processing
+  - GDAL/OGR  (osgeo.ogr/osr)
+  - fiona
+  - geopandas
+  - shapely
+
+## Scientific Data Formats
+  - NetCDF4
+  - pytables
+  - PyNIO
+  - GDAL (osgeo.gdal)
+
+## Domain-Specialties
+  - scikit-image
+  - scikit-learn
+  - astropy
+  - statsmodels
+
+# Thoughts
+  - One of the things I love about the SciPy community is the
+    co-operative nature of it.
+  - Projects work to complement each other and "stand on the shoulders
+    of giants".
+  - Interesting that this community was predominately SVN and then Git,
+    while the rest of the python community was on mercurial
+  - Teaching scientists how to program well: software-carpentry.org
 
