@@ -1,0 +1,61 @@
+# Introductions
+## Thank the sponsors
+### Klaviyo
+I looked at the website, and I still have no clue what you guys do,
+but I am pretty sure it can help me make money... somehow...
+
+### Here
+A technology company that doesn't end in ".com"!
+
+## Who am I?
+B.S. & M.S. in Meteorology from Penn State
+ - learned Perl, C/C++, MatLab & a terrible language called GrADS
+ - discovered Linux and Vim and never looked back
+ - so many software tools for meteorologists are written for Linux
+
+Spent 5 years in PhD hell at the University of Oklahoma
+ - Ran into all sorts of problems with MatLab
+ - Colleague suggested that I try Matplotlib & Python
+ - Within a couple of months, I managed to convert every single
+   MatLab script of mine into Python
+ - Kept on developing my research using those tools, and posting
+   patches to the various mailing lists (pre-GitHub days).
+
+Matplotlib Developer
+ - Finally, John Hunter of Matplotlib said I annoyed him enough
+   that he gave me commit rights.
+ - Personally managed the v1.1.0 release of Matplotlib
+ - Very active on the mpl mailing list
+
+The matplotlib mailing list is directly responsible for two things:
+ -- Me not finishing my dissertation
+ -- Current job
+ - http://matplotlib.1069221.n5.nabble.com/How-matplotlib-got-me-a-job-td27470.html
+ - tl;dr; answer questions on mailing lists, you never know if the person
+   you are helping out will be your next co-worker!
+
+Author
+ - The Anatomy of Matplotlib Tutorial: https://github.com/WeatherGod/AnatomyOfMatplotlib
+ - Interactive Applications using Matplotlib: http://www.amazon.com/Interactive-Applications-using-Matplotlib-Benjamin/dp/1783988843/ref=tmm_pap_title_0
+
+SciPy Conference Co-chair
+ - Financial Aid (2015)
+ - Tutorials (2016)
+
+Scientific Programmer at Atmospheric and Environmental Research, Inc.
+
+## What is AER?
+We are a research-oriented company focusing on observational data
+of all kinds -- surface, radar, hydrological and satellite data.
+We also work closely with many companies around the world to study how
+the weather and climate impacts their business.
+
+We are primarially a Python shop, and our researchers use many other tools
+as well. We have a mix of Linux, Mac and Windows environments.
+
+We are looking to hire a few devops people with Linux experience!
+You don't need to know a thing about meteorology
+ -- just have a willingness to learn Python!
+
+# Introduction to the SciPy Ecosystem
+
